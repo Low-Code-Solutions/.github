@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 36" width="1200" height="36" role="img" aria-label="Section divider">
+<style>
+  .base { stroke:#585858; stroke-opacity:.35; stroke-width:2.5; fill:none; stroke-linecap:square; }
+  .run  { stroke:#0E8080; stroke-width:5; fill:none; stroke-linecap:square; stroke-dasharray:60 1000; stroke-dashoffset:60; animation:run 6s linear infinite; }
+  @keyframes run { to { stroke-dashoffset:-1000; } }
+  @media (prefers-color-scheme: dark) { .base { stroke:#8B9096; } .run { stroke:#16A6A3; } }
+  @media (prefers-reduced-motion: reduce) { .run { animation:none; stroke-dashoffset:-470; } }
+</style>
+<path class="base" d="M-6,9 L66,9 L66,27 L210,27 L210,9 L354,9 L354,27 L426,27 L426,9 L516,9 L516,27 L660,27 L660,9 L768,9 L768,27 L912,27 L912,9 L966,9 L966,27 L1110,27 L1110,9 L1164,9 L1164,27 L1206,27"/>
+<path class="run" pathLength="1000" d="M-6,9 L66,9 L66,27 L210,27 L210,9 L354,9 L354,27 L426,27 L426,9 L516,9 L516,27 L660,27 L660,9 L768,9 L768,27 L912,27 L912,9 L966,9 L966,27 L1110,27 L1110,9 L1164,9 L1164,27 L1206,27"/>
+</svg>
