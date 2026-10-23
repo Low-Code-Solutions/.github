@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -6 1212 180" width="1212" height="180" role="img" aria-label="LCS mark at the centre of a maze, with a route running through it">
+<style>
+  .wall { stroke:#585858; stroke-opacity:.32; stroke-width:2.5; stroke-linecap:square; fill:none; }
+  .room { stroke:#585858; stroke-opacity:.55; stroke-width:2.5; stroke-linecap:square; fill:none; }
+  .route { stroke:#0E8080; stroke-width:6; fill:none; stroke-linejoin:miter; stroke-linecap:square;
+           stroke-dasharray:1; stroke-dashoffset:1; animation:draw 2.2s cubic-bezier(.65,0,.35,1) forwards; }
+  .comet { stroke:#0E8080; stroke-width:6; fill:none; stroke-linecap:square; opacity:0;
+           stroke-dasharray:24 1000; stroke-dashoffset:24; animation:run 7s linear infinite; }
+  .ms { stroke-dasharray:1; stroke-dashoffset:1; animation:draw .7s ease-out forwards; }
+  .ms.t { stroke:#0E8080; } .ms.g { stroke:#585858; }
+  .msdot { fill:#585858; opacity:0; animation:fade .4s ease-out forwards; }
+  .txt { opacity:0; animation:fade .9s ease-out forwards; }
+  .name { fill:#0E8080; font:800 92px 'Avenir Next','Segoe UI Variable Display','Segoe UI','Helvetica Neue',Arial,sans-serif; letter-spacing:2px; }
+  .full { fill:#585858; font:600 25px 'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif; }
+  .tag  { fill:#585858; font:400 19px 'Avenir Next','Segoe UI','Helvetica Neue',Arial,sans-serif; }
+  .rule { stroke:#0E8080; stroke-width:4; }
+  @keyframes draw { to { stroke-dashoffset:0; } }
+  @keyframes fade { to { opacity:1; } }
+  @keyframes run  { 0% { stroke-dashoffset:24; opacity:1; } 100% { stroke-dashoffset:-1000; opacity:1; } }
+  @media (prefers-color-scheme: dark) {
+    .route,.comet,.ms.t,.rule { stroke:#16A6A3; } .name { fill:#16A6A3; }
+    .wall,.room,.ms.g { stroke:#8B9096; } .msdot,.full,.tag { fill:#8B9096; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .route,.ms { animation:none; stroke-dashoffset:0; } .msdot,.txt { animation:none; opacity:1; } .comet { display:none; }
+  }
+  .ms { animation:none; stroke-dashoffset:0; } .msdot { animation:none; opacity:1; }
+
+  .comet { animation-duration:8s; }
+</style>
+<path class="wall" d="M0,24h24 M48,24h24 M120,0v24 M120,24h24 M192,0v24 M192,24h24 M216,24h24 M240,24h24 M288,24h24 M336,0v24 M360,24h24 M384,24h24 M408,24h24 M432,24h24 M480,0v24 M720,0v24 M744,24h24 M768,24h24 M816,0v24 M816,24h24 M864,24h24 M888,24h24 M912,24h24 M984,0v24 M1008,24h24 M1032,24h24 M1056,24h24 M1080,24h24 M1104,24h24 M1152,24h24 M24,24v24 M48,24v24 M96,24v24 M72,48h24 M96,48h24 M120,48h24 M168,24v24 M144,48h24 M168,48h24 M192,48h24 M216,48h24 M240,48h24 M288,24v24 M264,48h24 M312,24v24 M336,24v24 M384,24v24 M384,48h24 M432,48h24 M480,24v24 M456,48h24 M696,48h24 M744,24v24 M720,48h24 M744,48h24 M792,24v24 M792,48h24 M864,24v24 M888,24v24 M912,48h24 M960,24v24 M936,48h24 M984,24v24 M960,48h24 M1008,24v24 M1080,24v24 M1056,48h24 M1128,24v24 M1128,48h24 M1176,24v24 M48,48v24 M24,72h24 M72,48v24 M72,72h24 M96,72h24 M120,72h24 M144,72h24 M168,72h24 M216,48v24 M264,48v24 M288,72h24 M336,48v24 M312,72h24 M360,48v24 M360,72h24 M408,48v24 M432,48v24 M480,48v24 M720,72h24 M744,72h24 M816,48v24 M792,72h24 M840,48v24 M864,48v24 M888,48v24 M888,72h24 M912,72h24 M936,72h24 M960,72h24 M984,72h24 M1032,48v24 M1008,72h24 M1056,48v24 M1032,72h24 M1080,72h24 M1104,72h24 M1152,48v24 M1176,48v24 M1152,72h24 M0,96h24 M48,72v24 M48,96h24 M72,96h24 M96,96h24 M120,96h24 M144,96h24 M192,72v24 M216,72v24 M240,72v24 M264,72v24 M264,96h24 M312,96h24 M360,72v24 M336,96h24 M408,72v24 M384,96h24 M408,96h24 M456,72v24 M432,96h24 M480,72v24 M744,72v24 M744,96h24 M792,72v24 M840,72v24 M816,96h24 M888,72v24 M864,96h24 M960,96h24 M984,96h24 M1008,96h24 M1056,72v24 M1056,96h24 M1080,96h24 M1128,72v24 M1152,72v24 M24,96v24 M48,96v24 M72,120h24 M96,120h24 M144,96v24 M192,96v24 M168,120h24 M240,96v24 M216,120h24 M264,96v24 M312,96v24 M288,120h24 M336,120h24 M384,96v24 M360,120h24 M408,120h24 M456,96v24 M480,96v24 M720,96v24 M720,120h24 M768,96v24 M768,120h24 M816,96v24 M864,96v24 M840,120h24 M912,96v24 M888,120h24 M936,96v24 M960,96v24 M984,120h24 M1032,96v24 M1032,120h24 M1056,120h24 M1080,120h24 M1128,96v24 M1104,120h24 M1128,120h24 M1176,96v24 M1152,120h24 M24,120v24 M24,144h24 M72,120v24 M48,144h24 M120,120v24 M96,144h24 M144,120v24 M168,120v24 M192,120v24 M192,144h24 M240,120v24 M240,144h24 M288,120v24 M264,144h24 M288,144h24 M336,120v24 M384,120v24 M408,120v24 M432,120v24 M432,144h24 M480,120v24 M456,144h24 M720,120v24 M744,120v24 M768,120v24 M816,120v24 M792,144h24 M816,144h24 M864,120v24 M840,144h24 M888,120v24 M912,120v24 M936,120v24 M960,120v24 M960,144h24 M1008,120v24 M1032,120v24 M1056,144h24 M1104,144h24 M1128,144h24 M1176,120v24 M1152,144h24 M168,144v24 M336,144v24 M360,144v24 M504,144v24 M744,144v24 M888,144v24 M960,144v24 M1008,144v24 M1080,144v24 M0,0v24 M1200,0v24 M0,24v24 M1200,24v24 M0,48v24 M1200,48v24 M0,96v24 M1200,96v24 M0,120v24 M1200,120v24 M0,144v24 M1200,144v24 M0,0h24 M0,168h24 M24,0h24 M24,168h24 M48,0h24 M48,168h24 M72,0h24 M72,168h24 M96,0h24 M96,168h24 M120,0h24 M120,168h24 M144,0h24 M144,168h24 M168,0h24 M168,168h24 M192,0h24 M192,168h24 M216,0h24 M216,168h24 M240,0h24 M240,168h24 M264,0h24 M264,168h24 M288,0h24 M288,168h24 M312,0h24 M312,168h24 M336,0h24 M336,168h24 M360,0h24 M360,168h24 M384,0h24 M384,168h24 M408,0h24 M408,168h24 M432,0h24 M432,168h24 M456,0h24 M456,168h24 M480,0h24 M480,168h24 M504,0h24 M504,168h24 M528,0h24 M528,168h24 M552,0h24 M552,168h24 M576,0h24 M576,168h24 M600,0h24 M600,168h24 M624,0h24 M624,168h24 M648,0h24 M648,168h24 M672,0h24 M672,168h24 M696,0h24 M696,168h24 M720,0h24 M720,168h24 M744,0h24 M744,168h24 M768,0h24 M768,168h24 M792,0h24 M792,168h24 M816,0h24 M816,168h24 M840,0h24 M840,168h24 M864,0h24 M864,168h24 M888,0h24 M888,168h24 M912,0h24 M912,168h24 M936,0h24 M936,168h24 M960,0h24 M960,168h24 M984,0h24 M984,168h24 M1008,0h24 M1008,168h24 M1032,0h24 M1032,168h24 M1056,0h24 M1056,168h24 M1080,0h24 M1080,168h24 M1104,0h24 M1104,168h24 M1128,0h24 M1128,168h24 M1152,0h24 M1152,168h24 M1176,0h24 M1176,168h24"/>
+<path class="room" d="M504,24h24 M504,144h24 M528,24h24 M528,144h24 M552,24h24 M552,144h24 M576,24h24 M576,144h24 M600,24h24 M600,144h24 M624,24h24 M624,144h24 M648,24h24 M648,144h24 M672,24h24 M672,144h24 M504,24v24 M696,24v24 M504,48v24 M696,48v24 M504,96v24 M696,96v24 M504,120v24 M696,120v24"/>
+<path class="route" pathLength="1" style="animation:none;stroke-dashoffset:0;stroke-opacity:.25" d="M-6,84 L12,84 L12,60 L36,60 L36,12 L108,12 L108,36 L156,36 L156,12 L180,12 L180,36 L276,36 L276,12 L324,12 L324,60 L276,60 L276,84 L348,84 L348,12 L468,12 L468,36 L420,36 L420,84 L444,84 L444,60 L468,60 L468,132 L444,132 L444,108 L396,108 L396,156 L492,156 L492,84 L514,84"/>
+<path class="route" pathLength="1" style="animation:none;stroke-dashoffset:0;stroke-opacity:.25" d="M686,84 L732,84 L732,108 L756,108 L756,156 L876,156 L876,108 L900,108 L900,84 L1044,84 L1044,108 L1116,108 L1116,84 L1068,84 L1068,60 L1140,60 L1140,108 L1164,108 L1164,84 L1206,84"/>
+<path class="comet" pathLength="1000" style="animation-delay:.5s" d="M-6,84 L12,84 L12,60 L36,60 L36,12 L108,12 L108,36 L156,36 L156,12 L180,12 L180,36 L276,36 L276,12 L324,12 L324,60 L276,60 L276,84 L348,84 L348,12 L468,12 L468,36 L420,36 L420,84 L444,84 L444,60 L468,60 L468,132 L444,132 L444,108 L396,108 L396,156 L492,156 L492,84 L514,84"/>
+<path class="comet" pathLength="1000" style="animation-delay:4.5s" d="M686,84 L732,84 L732,108 L756,108 L756,156 L876,156 L876,108 L900,108 L900,84 L1044,84 L1044,108 L1116,108 L1116,84 L1068,84 L1068,60 L1140,60 L1140,108 L1164,108 L1164,84 L1206,84"/>
+<g transform="translate(544.0,26.999999999999993) scale(0.56)" fill="none" stroke-width="10" stroke-linecap="butt" stroke-linejoin="miter">
+<path class="ms g" style="animation-delay:0.00s" pathLength="1" d="M21,160 V182 H179 V53"/>
+<path class="ms g" style="animation-delay:0.00s" pathLength="1" d="M179,42 V21 H21 V150"/>
+<path class="ms g" style="animation-delay:0.00s" pathLength="1" d="M104,48 H155 V75"/>
+<path class="ms g" style="animation-delay:0.00s" pathLength="1" d="M106,116 H133 V138"/>
+<path class="ms t" style="animation-delay:0.00s" pathLength="1" d="M45,42 V155 H67 V133"/>
+<path class="ms t" style="animation-delay:0.00s" pathLength="1" d="M94,48 H67 V116 H94"/>
+<path class="ms t" style="animation-delay:0.00s" pathLength="1" d="M138,70 H89 V94 H155 V155 H89 V133"/>
+<rect class="msdot" style="animation-delay:0.00s" x="106" y="128" width="10" height="10"/>
+</g>
+</svg>
